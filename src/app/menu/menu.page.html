@@ -1,4 +1,3 @@
-<!--
 <ion-split-pane>
   <ion-menu>
       <ion-header>
@@ -9,26 +8,21 @@
 
       <ion-content>
           <ion-list>
-            <ion-menu-toggle auto-hide="false">
-              <ion-item href="/tab1" routerDirection="root">
-                <ion-label>Tab 1</ion-label>
-              </ion-item>
-              <ion-item href="/tab2" routerDirection="root">
-                <ion-label>Tab 2</ion-label>
-              </ion-item>
-              <ion-item href="/tab3" routerDirection="root">
-                <ion-label>Tab 3</ion-label>
-              </ion-item>
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+              <ion-item button [routerLink] = "p.url" [class.active-item]="selectedPath === p.url" routerDirection="root">
+                <ion-label>
+                  {{ p.title }}
+                </ion-label>
+              </ion-item>    
             </ion-menu-toggle>
           </ion-list>
       </ion-content>
     
   </ion-menu>
--->
+
   <ion-router-outlet id="content" main></ion-router-outlet>
-<!--
 </ion-split-pane>
--->
+
 
 
 

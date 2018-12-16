@@ -3,11 +3,14 @@
     <ion-title>
       Tab Two
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <h1>2</h1>
-    <ion-button (click)="navigateForward()">NavigateRoot to 3</ion-button>
+    <ion-button (click)="navigateRoot()">NavigateRoot to 3</ion-button>
     <ion-button (click)="navigateForward()">NavigateForward to 3</ion-button>
 </ion-content>
